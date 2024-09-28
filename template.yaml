@@ -85,15 +85,6 @@ Resources:
                   - s3:DeleteObject
                 Resource: arn:aws:s3:::atifa-cli-bucket/*
 
-        - PolicyName: PassRolePolicy  # Adding PassRole policy here
-          PolicyDocument:
-              Version: '2012-10-17'
-              Statement:
-                - Effect: Allow
-                  Action:
-                    - iam:PassRole
-                  Resource: arn:aws:iam::061234066233:role/cloudformation-role-to-define-at-code-deploy
-
 Outputs:
   ApiGatewayApi:
     Description: "API Gateway endpoint URL"
